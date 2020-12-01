@@ -13,7 +13,7 @@ public abstract class NoDemandMixin {
     protected int demandBonus;
 
     @Overwrite
-    public void UpdatePriceOnDemand()
+    public void updatePriceOnDemand()
     {
         this.demandBonus = 0;
     }
