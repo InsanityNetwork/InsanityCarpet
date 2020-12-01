@@ -22,7 +22,7 @@ public abstract class GossipEntryMixin {
     @Shadow 
     protected VillageGossipType type;
     
-    @Inject(method = "..init(Ljava/util/UUID;Lnet/minecraft/village/VillageGossipType;I)V", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "<init>(Ljava/util/UUID;Lnet/minecraft/village/VillageGossipType;I)V", at = @At("HEAD"), cancellable = true)
     public void globalizeGossipEntryCtor(CallbackInfo ci)
     {
         if(type != type.MAJOR_NEGATIVE && type != type.MINOR_NEGATIVE) {
