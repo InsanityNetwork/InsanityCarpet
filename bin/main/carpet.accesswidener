@@ -1,4 +1,7 @@
 accessWidener v1 named
 
-accessible class net/minecraft/village/VillagerGossips$GossipEntry
-accessible method net/minecraft/entity/passive/VillagerEntity decayGossip ()V 
+accessible field net/minecraft/village/TradeOffer firstBuyItem Lnet/minecraft/village/ItemStack;
+accessible field net/minecraft/village/TradeOffer sellItem Lnet/minecraft/village/ItemStack;
+
+accessible field net/minecraft/item/ItemStack item Lnet/minecraft/item/Item;
+accessible field net/minecraft/item/ItemStack count I
