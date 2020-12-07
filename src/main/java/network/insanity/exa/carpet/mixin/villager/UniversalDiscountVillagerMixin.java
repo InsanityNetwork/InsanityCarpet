@@ -11,10 +11,7 @@ import net.minecraft.entity.EntityInteraction;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.AbstractTraderEntity;
 import net.minecraft.entity.passive.VillagerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.VillageGossipType;
 import net.minecraft.village.VillagerGossips;
@@ -37,7 +34,9 @@ public abstract class UniversalDiscountVillagerMixin extends AbstractTraderEntit
             this.gossip.startGossip(entity.getUuid(), VillageGossipType.MAJOR_POSITIVE, 20);        
             
             for (TradeOffer offer : this.offers) {
-                offer.firstBuyItem.count = Math.min(offer.firstBuyItem.count - (Math.max(new Random().nextInt(11), 7)), 1);
+                ItemStack firstBuyItem = ((AccessibleTradeItemMixin)offer).getFirstBuyItem();
+                firstBuyItem.count -= Math.max(new Random().nextInt(11), 7);
+                ((AccessibleTradeItemMixin)offer).setFirstBuyItem(firstBuyItem);
             }
         } else if (interaction == EntityInteraction.TRADE) {
             this.gossip.startGossip(entity.getUuid(), VillageGossipType.TRADING, 5);

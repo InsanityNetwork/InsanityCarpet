@@ -4,8 +4,7 @@
   "package": "network.insanity.exa.carpet.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "villager.NoDemandMixin",
-    "villager.UniversalDiscountVillagerMixin"
+    "villager.NoDemandMixin"
   ],
   "injectors": {
     "defaultRequire": 1
