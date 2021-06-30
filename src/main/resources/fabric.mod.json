@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "insanity-carpet",
+  "id": "insanity-qol",
   "version": "${version}",
 
-  "accessWidener": "carpet.accesswidener",
+  "accessWidener": "qol.accesswidener",
 
-  "name": "InsanityCarpet",
+  "name": "Insanity QoL",
   "description": "Some sort of mod, apparently",
   "authors": [
     "ExaInsanity"
   ],
   "contact": {
     "homepage": "https://insanity.network/",
-    "sources": "https://github.com/InsanityNetwork/InsanityCarpet"
+    "sources": "https://github.com/InsanityNetwork/insanity-qol"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/carpet/icon.png",
+  "icon": "assets/qol/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "network.insanity.exa.carpet.InsanityCarpetClient"
+      "network.insanity.exa.qol.InsanityQolClient"
     ]
   },
   "mixins": [
-    "carpet.mixins.json"
+    "qol.mixins.json"
   ],
 
   "depends": {
